@@ -1,3 +1,7 @@
 spring:
   application:
     name: task-manager
+
+jwt:
+  secret: your-secret-key
+  expiration: 86400000
