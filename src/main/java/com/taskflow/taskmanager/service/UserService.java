@@ -27,7 +27,7 @@ public class UserService {
         User user = User.builder()
                 .name(registerRequest.getName())
                 .email(registerRequest.getEmail())
-                .password(registerRequest.getPassword())
+                .password(passwordEncoder.encode(registerRequest.getPassword()))
                 .createdAt(LocalDateTime.now())
                 .build();
 
